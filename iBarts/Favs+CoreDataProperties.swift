@@ -2,7 +2,7 @@
 //  Favs+CoreDataProperties.swift
 //  iBArts_Project
 //
-//  Created by ashutosh deshpande on 23/05/2022.
+//  Created by Sagar Bhosale on 23/05/2022.
 //
 //
 

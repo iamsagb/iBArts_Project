@@ -2,7 +2,7 @@
 //  MoviesViewController.swift
 //  iBArts_Project
 //
-//  Created by ashutosh deshpande on 23/05/2022.
+//  Created by Sagar Bhosale on 23/05/2022.
 //
 
 import UIKit
@@ -64,9 +64,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     
     private func handleMarkAsFavourite() {
         print("Marked as favourite")
-        let favMovie = Favs(context: context)
-        
-                }
+    
     }
     
     

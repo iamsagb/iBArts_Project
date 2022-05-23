@@ -9,7 +9,11 @@ import UIKit
 
 class FavouriteViewController: UIViewController {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     let favourite: [String] = []
+    let 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,7 @@ extension FavouriteViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1")
-        cell?.textLabel.text = favourite.title
+        cell?.textLabel.text = Favs.title
         
         return cell!
     }
