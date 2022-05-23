@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import SDWebImage
 
 class MoviesViewController: UIViewController {
     var movies: Movies?
@@ -55,11 +56,9 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
 
         cell.titleLabel.text = movies?.results[indexPath.row].originalTitle
         
+        cell.posterImage.image =
         
-        let url = (movies?.results[indexPath.row].posterPath)!
-        let imagedata = try! Data(contentsOf: URL(string: url)!)
-        cell.posterImage.image = UIImage(data: imagedata)
-        return cell
+       
     }
     
     private func handleMarkAsFavourite() {
@@ -88,3 +87,4 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
 
 /* generated API link https://api.themoviedb.org/3/movie/now_playing?api_key=86f896e67a3086d0fb6f497460b51c36&language=en-US&page=1
 */
+}
