@@ -19,7 +19,7 @@ class FavouriteViewController: UIViewController {
 
     
 }
-//
+
 extension FavouriteViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +28,7 @@ extension FavouriteViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell1")
- //       cell?.textLabel.text = archive.title
+        cell?.textLabel.text = favourite.title
         
         return cell!
     }

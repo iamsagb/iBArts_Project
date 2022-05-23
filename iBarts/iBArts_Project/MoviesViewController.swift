@@ -10,6 +10,8 @@ import Foundation
 
 class MoviesViewController: UIViewController {
     var movies: Movies?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     @IBOutlet weak var moviesTableView: UITableView!
     
@@ -25,7 +27,7 @@ class MoviesViewController: UIViewController {
         URLSession.shared.dataTask(with: url!) { data, response, error in
             do{
                 self.movies = try JSONDecoder().decode(Movies.self, from: data!)
-
+                
                 DispatchQueue.main.async {
                     self.moviesTableView.reloadData()
                 }
@@ -52,37 +54,35 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MoviesListTableViewCell
 
         cell.titleLabel.text = movies?.results[indexPath.row].originalTitle
-
-//        MARK: Convertion of URL to Image
-//        let url = posterLink
-//        let imagedata = try! Data(contentsOf: URL(string: url)!)
-//        cell.postImage.image = UIImage(data: imagedata)
+        
+        
+        let url = (movies?.results[indexPath.row].posterPath)!
+        let imagedata = try! Data(contentsOf: URL(string: url)!)
+        cell.posterImage.image = UIImage(data: imagedata)
         return cell
     }
+    
+    private func handleMarkAsFavourite() {
+        print("Marked as favourite")
+        let favMovie = Favs(context: context)
+        
+                }
+    }
+    
+    
+    func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let action = UIContextualAction(style: .normal,
+                                        title: "Favourite") { [weak self] (action, view, completionHandler) in
+                                            self?.handleMarkAsFavourite()
+                                            completionHandler(true)
+        }
+        action.backgroundColor = .systemBlue
+        return UISwipeActionsConfiguration(actions: [action])
+    }
 
-//
-//    func tableView(_ tableView: UITableView,
-//                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//
-//        let action = UIContextualAction(style: .normal,
-//                                        title: "Favourite") { [weak self] (action, view, completionHandler) in
-//                                            self?.handleMarkAsFavourite()
-//                                            completionHandler(true)
-//            action.backgroundColor = .systemYellow
-//
-//            let archive = UIContextualAction(style: .normal,
-//                                             title: "archive") { [weak self] (action, view, completionHandler) in
-//                                                self?.handleMoveToArchive()
-//                                                completionHandler(true)
-//
-//
-//        } favourite.backgroundColor = .systemYellow
-//
-//    }
 
-
-
-}
 
 
 

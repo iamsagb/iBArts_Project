@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5E00CA84283B5F9400051D7B /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00CA83283B5F9400051D7B /* MoviesViewController.swift */; };
 		5E00CA86283B61DE00051D7B /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00CA85283B61DE00051D7B /* Movies.swift */; };
+		5E00CA89283B67D400051D7B /* Favs+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00CA87283B67D400051D7B /* Favs+CoreDataClass.swift */; };
+		5E00CA8A283B67D400051D7B /* Favs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00CA88283B67D400051D7B /* Favs+CoreDataProperties.swift */; };
 		9431A7CA2839186300FC28CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431A7C92839186300FC28CE /* AppDelegate.swift */; };
 		9431A7CC2839186300FC28CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9431A7CB2839186300FC28CE /* SceneDelegate.swift */; };
 		9431A7D12839186300FC28CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9431A7CF2839186300FC28CE /* Main.storyboard */; };
@@ -22,10 +24,11 @@
 /* Begin PBXFileReference section */
 		5E00CA83283B5F9400051D7B /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		5E00CA85283B61DE00051D7B /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		5E00CA87283B67D400051D7B /* Favs+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favs+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5E00CA88283B67D400051D7B /* Favs+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favs+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9431A7C62839186300FC28CE /* iBArts_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBArts_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9431A7C92839186300FC28CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9431A7CB2839186300FC28CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9431A7CD2839186300FC28CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9431A7D02839186300FC28CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9431A7D32839186300FC28CE /* iBArts_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iBArts_Project.xcdatamodel; sourceTree = "<group>"; };
 		9431A7D52839186500FC28CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,8 @@
 		9431A7BD2839186300FC28CE = {
 			isa = PBXGroup;
 			children = (
+				5E00CA87283B67D400051D7B /* Favs+CoreDataClass.swift */,
+				5E00CA88283B67D400051D7B /* Favs+CoreDataProperties.swift */,
 				9431A7C82839186300FC28CE /* iBArts_Project */,
 				9431A7C72839186300FC28CE /* Products */,
 			);
@@ -67,7 +72,6 @@
 			children = (
 				9431A7C92839186300FC28CE /* AppDelegate.swift */,
 				9431A7CB2839186300FC28CE /* SceneDelegate.swift */,
-				9431A7CD2839186300FC28CE /* ViewController.swift */,
 				5E00CA83283B5F9400051D7B /* MoviesViewController.swift */,
 				94578C6B283A1E4500AEB629 /* FavouriteViewController.swift */,
 				9431A7FC28391BDA00FC28CE /* MoviesListTableViewCell.swift */,
@@ -154,11 +158,13 @@
 			files = (
 				5E00CA86283B61DE00051D7B /* Movies.swift in Sources */,
 				9431A7FD28391BDA00FC28CE /* MoviesListTableViewCell.swift in Sources */,
+				5E00CA8A283B67D400051D7B /* Favs+CoreDataProperties.swift in Sources */,
 				9431A7CA2839186300FC28CE /* AppDelegate.swift in Sources */,
 				9431A7D42839186300FC28CE /* iBArts_Project.xcdatamodeld in Sources */,
 				94578C6C283A1E4500AEB629 /* FavouriteViewController.swift in Sources */,
 				9431A7CC2839186300FC28CE /* SceneDelegate.swift in Sources */,
 				5E00CA84283B5F9400051D7B /* MoviesViewController.swift in Sources */,
+				5E00CA89283B67D400051D7B /* Favs+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
